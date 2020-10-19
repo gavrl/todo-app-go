@@ -10,6 +10,9 @@ go get -u github.com/jmoiron/sqlx
 УСТАНОВКА БИБЛИОТЕКИ ДЛЯ РАБОТЫ ПЕРЕМЕННЫМИ ОКРУЖЕНИЯ
 go get -u github.com/joho/godotenv
 
+УСТАНОВКА БИБЛИОТЕКИ ДЛЯ ЛОГИРОВАНИЯ
+go get -u github.com/sirupsen/logrus
+
 СОЗДАНИЕ МИГРАЦИИ
 migrate create -ext sql -dir ./schema -seq init
 

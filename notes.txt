@@ -13,6 +13,9 @@ go get -u github.com/joho/godotenv
 УСТАНОВКА БИБЛИОТЕКИ ДЛЯ ЛОГИРОВАНИЯ
 go get -u github.com/sirupsen/logrus
 
+УСТАНОВКА БИБЛИОТЕКИ ДЛЯ РАБОТЫ С JWT ТОКЕНАМИ
+go get -u github.com/dgrijalva/jwt-go
+
 СОЗДАНИЕ МИГРАЦИИ
 migrate create -ext sql -dir ./schema -seq init
 

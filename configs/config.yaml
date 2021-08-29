@@ -1,8 +1,7 @@
-port: "8082"
+port: "8080"
 db:
-  host: "192.168.56.101"
-  port: "5436"
-  username: "postgres"
-  password: "qwerty"
-  dbname: "postgres"
+  host: "localhost"
+  port: "15432"
+  username: "gavrl"
+  dbname: "todo_db"
   sslmode: "disable"

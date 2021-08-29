@@ -28,7 +28,7 @@ func main() {
 		Username: viper.GetString("db.username"),
 		DBName:   viper.GetString("db.dbname"),
 		SSLMode:  viper.GetString("db.sslmode"),
-		Password: os.Getenv("DB_PASSWORD"),
+		Password: os.Getenv("POSTGRES_PASSWORD"),
 	})
 
 	if err != nil {

@@ -15,3 +15,6 @@ migrate-up:
 
 migrate-down:
 	migrate -path ./schema -database ${DATABASE_URL} down
+
+run:
+	go run cmd/main.go

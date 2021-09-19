@@ -29,16 +29,14 @@ func (r *TodoListPostgres) Create(userId int, list todo.TodoList) (int, error) {
 		if err := tx.Rollback(); err != nil {
 			return 0, err
 		}
-		return 0, nil
+		return 0, err
 	}
 
 	createUserListsQuery := fmt.Sprintf("INSERT INTO %s (user_id, list_id) VALUES ($1, $2)", userListsTable)
 	_, err = tx.Exec(createUserListsQuery, userId, id)
 	if err != nil {
-		if err = tx.Rollback(); err != nil {
-			return 0, err
-		}
-		return 0, nil
+		tx.Rollback()
+		return 0, err
 	}
 
 	return id, tx.Commit()
